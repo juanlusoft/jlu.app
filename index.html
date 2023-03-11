@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Homelab</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Bienvenido a mi Homelab</h1>
+    <nav>
+      <ul>
+        <li><a href="#servidores">Servidores</a></li>
+        <li><a href="#nas">Dispositivos NAS</a></li>
+        <li><a href="#raspberry-pi">Raspberry Pi</a></li>
+        <li><a href="#manuales">Manuales</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>¿Tema claro u oscuro?</h2>
+    <label>
+      <input type="radio" name="tema" value="claro" onclick="cambiarTema('claro')">
+      Tema claro
+    </label>
+    <label>
+      <input type="radio" name="tema" value="oscuro" onclick="cambiarTema('oscuro')">
+      Tema oscuro
+    </label>
+
+    <section id="servidores">
+      <h2>Mis servidores</h2>
+      <!-- Contenido de la sección de servidores -->
+    </section>
+
+    <section id="nas">
+      <h2>Mis dispositivos NAS</h2>
+      <!-- Contenido de la sección de dispositivos NAS -->
+    </section>
+
+    <section id="raspberry-pi">
+      <h2>Mis Raspberry Pi</h2>
+      <!-- Contenido de la sección de Raspberry Pi -->
+    </section>
+
+    <section id="manuales">
+      <h2>Manuales</h2>
+      <!-- Contenido de la sección de manuales -->
+    </section>
+  </main>
+
+  <script>
+    function cambiarTema(tema) {
+      if (tema === 'claro') {
+        document.body.classList.add('tema-claro');
+        document.body.classList.remove('tema-oscuro');
+      } else if (tema === 'oscuro') {
+        document.body.classList.add('tema-oscuro');
+        document.body.classList.remove('tema-claro');
+      }
+    }
+  </script>
+</body>
+</html>
